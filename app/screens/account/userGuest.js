@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
       alignItems: "center",
     },
     btnStyle: {
-      backgroundColor: "#00a680",
+      backgroundColor: "red",
     },
     btnContainer: {
       width: "70%",
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   const UserGuest  = (props) =>   {
   
     const navigation=useNavigation();
-    console.warn('navigation', navigation);
+    //console.warn('navigation', navigation);
      /*
       goLogin = () => {
        console.warn('this.props', this.props);
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     
     <ScrollView centerContent={true} style={styles.viewBody}>
     <Image
-      source={require("../../assets/user-guest.jpg")}
+      source={require("../../assets/logologin.jpg")}
       resizeMode="contain"
       style={styles.image}
     />
