@@ -86,10 +86,10 @@ export default function LoginForm(props)   {
       width: "95%",
     },
     btnLogin: {
-      backgroundColor: "red",
+      backgroundColor: "#9b0000",
     },
     iconRight: {
-      color: "red",
+      color: "#9b0000",
     },
   });
   

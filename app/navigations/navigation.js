@@ -21,11 +21,12 @@ const Navigation  = (props) => {
                     <Tab.Screen
                         name="restaurants"
                         component={RestaurantsStack}
-                        options={{ title: "Restaurantes" }}
+                        options={{ title: "Restaurantes",color:"#9b0000" }}
+                        color="#9b0000"
                         options={{
-                            title: "Restaurantes",
+                            
                             tabBarIcon: ({ color, size }) => (
-                              <MaterialIcons name="restaurant" color={'red'} size={40} />
+                              <MaterialIcons name="restaurant" color={'#9b0000'} size={35} />
                             ),
                           }}
                     />
@@ -35,14 +36,14 @@ const Navigation  = (props) => {
                         component={SearchStack}
                         options={{ title: "Buscar" ,
                         tabBarIcon: ({ color, size }) => (
-                          <MaterialIcons name="search" color={'red'} size={40} />
+                          <MaterialIcons name="search" color={'#9b0000'} size={35} />
                         ), }}
                     />
                     <Tab.Screen
                         name="account"
                         component={AccountStack}
                         options={{ title: "Cuenta",  tabBarIcon: ({ color, size }) => (
-                            <MaterialIcons  name="account-circle" color={'red'} size={40} />
+                            <MaterialIcons  name="account-circle" color={'#9b0000'} size={35} />
                           )}}
                     />
                 </Tab.Navigator>

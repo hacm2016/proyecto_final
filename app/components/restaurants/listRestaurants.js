@@ -33,13 +33,17 @@ export default function ListRestaurants(props) {
 
 function Restaurant(props) {
   const { restaurant, navigation } = props;
-  const { id, images, name, address, description } = restaurant.item;
-  const imageRestaurant = images ? images[0] : null;
+  const { id, imagen, nombre, direccion, descripcion } = restaurant.item;
+  const imageRestaurant = imagen ? imagen[0] : null;
 
   const goRestaurant = () => {
+
     navigation.navigate("restaurant", {
       id,
-      name,
+      nombre,
+      imagen,
+      direccion,
+
     });
   };
 
@@ -49,20 +53,20 @@ function Restaurant(props) {
         <View style={styles.viewRestaurantImage}>
           <Image
             resizeMode="cover"
-            PlaceholderContent={<ActivityIndicator color="fff" />}
+            PlaceholderContent={<ActivityIndicator color="#9b0000" />}
             source={
               imageRestaurant
-                ? { uri: imageRestaurant }
+                ? { uri: imagen }
                 : require("../../assets/no-image.png")
             }
             style={styles.imageRestaurant}
           />
         </View>
         <View>
-          <Text style={styles.restaurantName}>{name}</Text>
-          <Text style={styles.restaurantAddress}>{address}</Text>
+          <Text style={styles.restaurantName}>{nombre}</Text>
+          <Text style={styles.restaurantAddress}>{direccion}</Text>
           <Text style={styles.restaurantDescription}>
-            {description.substr(0, 60)}...
+            {descripcion}...
           </Text>
         </View>
       </View>
@@ -90,6 +94,7 @@ const styles = StyleSheet.create({
   },
   restaurantName: {
     fontWeight: "bold",
+    color:"#9b0000",
   },
   restaurantAddress: {
     paddingTop: 2,
@@ -99,6 +104,7 @@ const styles = StyleSheet.create({
     paddingTop: 2,
     color: "grey",
     width: 300,
+    textAlign:"justify",
   },
   notFoundRestaurants: {
     marginTop: 10, 

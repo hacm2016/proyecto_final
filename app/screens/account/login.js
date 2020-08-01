@@ -9,7 +9,7 @@ export default function Login()  {
       return (
         <ScrollView>
           <Image
-            source={require("../../assets/user-guess.png")}
+            source={require("../../assets/iniciar-sesion.png")}
             resizeMode="contain"
             style={styles.logo}
           />
@@ -56,11 +56,11 @@ export default function Login()  {
       marginRight: 10,
     },
     btnRegister: {
-      color: "red",
+      color: "#9b0000",
       fontWeight: "bold",
     },
     divider: {
-      backgroundColor: "red",
+      backgroundColor: "#9b0000",
       margin: 40,
     },
   });
